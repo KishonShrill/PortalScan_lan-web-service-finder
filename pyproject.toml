@@ -1,0 +1,13 @@
+[project]
+name = "portalscan"
+version = "0.0.1"
+description = "LAN Web Service Finder"
+authors = [{ name = "KishonShrill" }]
+requires-python = ">=3.9"
+dependencies = [
+    "colorama",
+    "requests"
+]
+
+[project.scripts]
+portalscan = "portalscan.main:main"
