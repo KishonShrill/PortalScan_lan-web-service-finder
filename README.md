@@ -1,5 +1,5 @@
 # PortalScan - LAN Web Service Finder
-A Python-based CLI tool to discover devices and web services available on your local network (LAN).<br /> It uses `arp-scan` for device discovery and `nmap` for port scanning, then checks for active HTTP services.
+**`portalscan`** is a Python-based CLI tool to discover devices and web services available on your local network (LAN).<br /> It uses `arp-scan` for device discovery and `nmap` for port scanning, then checks for active HTTP services.
 
 ## Features
 - **Device Discovery** — Scan your LAN for active devices using `arp-scan`
@@ -23,14 +23,18 @@ sudo apt install arp-scan nmap  # Debian/Ubuntu
 
 sudo dnf install arp-scan nmap  # Fedora
 ```
-
-1. As a package / Terminal app
+---
+---
+### As a package / Terminal app
 Install using `uv tool`.
 ```bash
-uv tool install git@github.com:KishonShrill/PortalScan_lan-web-service-finder.git
-```
+uv tool install git+ssh://git@github.com/KishonShrill/PortalScan_lan-web-service-finder.git
 
-2. (optional) As a developer
+portalscan  # This command will open the terminal app
+```
+---
+---
+### As a developer (optional)
 Install using `git clone`
 ```bash
 git clone git@github.com:KishonShrill/PortalScan_lan-web-service-finder.git
@@ -43,7 +47,8 @@ pipenv install --dev        # Install Python packages
 
 python3 -m portalscan.main  # Run portalscan python code
 ```
-
+---
+---
 ## Notes
 - This tool requires root privileges for `arp-scan` and `nmap`.
 - Intended for `educational and administrative purposes only` on networks you own or have persmission to scan.
